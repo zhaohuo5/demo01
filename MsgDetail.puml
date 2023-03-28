@@ -1,0 +1,13 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+前端 -> 应用服务程序: 消息查询
+应用服务程序 --> database:请求消息
+database --> 应用服务程序: 消息返回
+应用服务程序 --> redis: 写入缓存
+
+应用服务程序 -> 前端: 返回结果
+
+@enduml

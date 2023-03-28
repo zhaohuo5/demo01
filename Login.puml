@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+前端 -> 应用服务程序: 登录请求
+应用服务程序 --> database: 请求账户密码
+database --> 应用服务程序: 账户密码
+
+应用服务程序 -> 前端: 返回结果
+
+@enduml
